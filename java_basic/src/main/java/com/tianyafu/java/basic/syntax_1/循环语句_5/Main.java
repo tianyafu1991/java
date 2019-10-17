@@ -58,5 +58,14 @@ public class Main {
         for(int f=0; f >=0; f++){
             System.out.println(333);
         }
+
+        //循环嵌套
+
+        for(int i = 0;i<10; i++){
+            //外层循环1次  内层循环1圈
+            for(int j =0;i<5;i++){
+                System.out.println(i+j);
+            }
+        }
     }
 }
