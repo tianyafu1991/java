@@ -1,0 +1,29 @@
+spring:
+  # 环境切换
+#  profiles:
+#    active: dev
+  application:
+    name: study_demo
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  datasource:
+    # MySQL数据源:
+    name: mysqlDataSource
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE_NAME:shopping}?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:root}
+    driver-class-name: com.mysql.jdbc.Driver
+    testOnBorrow: true
+    validationQuery: select 1
+
+# 端口
+server:
+  port: 9100
+# Mybatis配置
+mybatis:
+  type-aliases-package: com.test.study_demo.bussiness.entity
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
