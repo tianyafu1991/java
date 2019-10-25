@@ -16,6 +16,12 @@ public class User implements Serializable {
     public User() {
     }
 
+    public User(String name, String sex, String school) {
+        this.name = name;
+        this.sex = sex;
+        this.school = school;
+    }
+
     public User(Integer id, String name, String sex, String school) {
         this.id = id;
         this.name = name;

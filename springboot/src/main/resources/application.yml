@@ -9,7 +9,7 @@ spring:
     time-zone: GMT+8
 
   datasource:
-    # MySQL数据源:
+    # 家里MySQL数据源:
     name: mysqlDataSource
     url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE_NAME:shopping}?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
     username: ${MYSQL_USERNAME:root}
@@ -17,6 +17,16 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     testOnBorrow: true
     validationQuery: select 1
+
+#  datasource:
+#    # 公司MySQL数据源:
+#    name: mysqlDataSource
+#    url: jdbc:mysql://${MYSQL_HOST:192.168.101.217}:${MYSQL_PORT:3306}/${MYSQL_DATABASE_NAME:test}?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+#    username: ${MYSQL_USERNAME:dev}
+#    password: ${MYSQL_PASSWORD:lJZx2Ik5eqX3xBDp}
+#    driver-class-name: com.mysql.jdbc.Driver
+#    testOnBorrow: true
+#    validationQuery: select 1
 
 # 端口
 server:
